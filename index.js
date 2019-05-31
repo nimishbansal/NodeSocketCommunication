@@ -20,7 +20,7 @@ app.use(express.static("public"));
 let io = socket(server);
 io.on('connection', function(socket){
     console.log("connection");
-    socket.on('chat message', function(msg){
+    socket.on('chat_message', function(msg){
         console.log(msg);
     });
     socket.emit('event', { hello: 'world' });
